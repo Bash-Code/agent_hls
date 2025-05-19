@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extraits de conversation avec l'Agent HLS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#f0f9ff",
+                100: "#e0f2fe",
+                500: "#0ea5e9",
+                600: "#0284c7",
+                700: "#0369a1",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Custom animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in {
+        animation: fadeIn 0.5s ease-out forwards;
+      }
+      .conversation-bubble {
+        position: relative;
+      }
+      .conversation-bubble::before {
+        content: "";
+        position: absolute;
+        left: -8px;
+        top: 12px;
+        border-width: 8px;
+        border-style: solid;
+        border-color: transparent #f3f4f6 transparent transparent;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <div class="max-w-7xl mx-auto p-4 md:p-8">
+      <div
+        class="bg-gradient-to-br from-primary-50 to-primary-100 rounded-2xl shadow-lg p-6 md:p-8"
+      >
+        <!-- Header -->
+        <div class="text-center mb-8 animate-fade-in">
+          <h1
+            class="text-3xl md:text-4xl font-bold text-gray-900 flex items-center justify-center gap-3 mb-4"
+          >
+            <i class="fas fa-chart-network text-primary-600"></i>
+            Extraits de conversation avec l'Agent HLS
+          </h1>
+          <p class="text-lg text-gray-600">
+            4 Scénarios pour adresser les piliers : HCP engagement / Clinical /
+            Patient / Collaboration - Provider
+          </p>
+        </div>
+
+        <!-- Scenarios Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- UC#1 -->
+          <div
+            class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow animate-fade-in"
+          >
+            <div class="pb-4 mb-4">
+              <h2
+                class="text-xl font-bold text-gray-900 flex items-center gap-2"
+              >
+                <i class="fas fa-user-md text-primary-600"></i>
+                UC#1 Commercial - HCP Engagement
+              </h2>
+              <p class="text-gray-600 mt-2">
+                <strong>Persona :</strong> Representant terrain : Sales Rep /
+                Med Rep
+              </p>
+            </div>
+
+            <div class="space-y-4">
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-user-circle text-gray-600 text-xl"></i>
+                </div>
+                <div
+                  class="flex-grow bg-gray-50 rounded-lg p-3 conversation-bubble"
+                >
+                  <p class="text-gray-700">
+                    « Quels sont les HCP à prioriser cette semaine ?»
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-robot text-primary-600 text-xl"></i>
+                </div>
+                <div
+                  class="flex-grow bg-primary-50 rounded-lg p-3 conversation-bubble ml-6"
+                >
+                  <p class="text-gray-700">
+                    « 14 HCPs à fort potentiel n'ont pas été contactés depuis 23
+                    jours, je vous propose 5 rendez-vous prioritaires. »
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-user-circle text-gray-600 text-xl"></i>
+                </div>
+                <div
+                  class="flex-grow bg-gray-50 rounded-lg p-3 conversation-bubble"
+                >
+                  <p class="text-gray-700">
+                    « Quel est mon taux de couverture sur le secteur Ouest ? »
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-robot text-primary-600 text-xl"></i>
+                </div>
+                <div
+                  class="flex-grow bg-primary-50 rounded-lg p-3 conversation-bubble ml-6"
+                >
+                  <p class="text-gray-700">
+                    « Votre taux de couverture est de 92%, en ligne avec les
+                    objectifs. Vos interactions multicanales moyennes sont à 6,4
+                    par HCP ce mois-ci. »
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- UC#2 -->
+          <div
+            class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow animate-fade-in"
+            style="animation-delay: 100ms"
+          >
+            <div class="pb-4 mb-4">
+              <h2
+                class="text-xl font-bold text-gray-900 flex items-center gap-2"
+              >
+                <i class="fas fa-flask text-primary-600"></i>
+                UC#2 Clinical Engagement
+              </h2>
+              <p class="text-gray-600 mt-2">
+                <strong>Persona :</strong> Clinical Trial Associate (CTA)
+              </p>
+            </div>
+
+            <div class="space-y-4">
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-user-circle text-gray-600 text-xl"></i>
+                </div>
+                <div
+                  class="flex-grow bg-gray-50 rounded-lg p-3 conversation-bubble"
+                >
+                  <p class="text-gray-700">
+                    « Où en est l'activation du site Lyon-Sud ? »
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-robot text-primary-600 text-xl"></i>
+                </div>
+                <div
+                  class="flex-grow bg-primary-50 rounded-lg p-3 conversation-bubble ml-6"
+                >
+                  <p class="text-gray-700">
+                    « Site Lyon-Sud activé en 9,2 jours, avec screening patient
+                    automatisé à 85%. »
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-user-circle text-gray-600 text-xl"></i>
+                </div>
+                <div
+                  class="flex-grow bg-gray-50 rounded-lg p-3 conversation-bubble"
+                >
+                  <p class="text-gray-700">
+                    « Quels patients sont éligibles pour l'étude DTX-231 ? »
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-robot text-primary-600 text-xl"></i>
+                </div>
+                <div
+                  class="flex-grow bg-primary-50 rounded-lg p-3 conversation-bubble ml-6"
+                >
+                  <p class="text-gray-700">
+                    « 7 patients éligibles identifiés cette semaine via IA.
+                    L'inclusion peut être faite en moyenne sous 3,6 jours. »
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- UC#3 -->
+          <div
+            class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow animate-fade-in"
+            style="animation-delay: 200ms"
+          >
+            <div class="pb-4 mb-4">
+              <h2
+                class="text-xl font-bold text-gray-900 flex items-center gap-2"
+              >
+                <i class="fas fa-user-nurse text-primary-600"></i>
+                UC#3 Patient Engagement
+              </h2>
+              <p class="text-gray-600 mt-2">
+                <strong>Persona :</strong> Patient Support Program Manager
+              </p>
+            </div>
+
+            <div class="space-y-4">
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-user-circle text-gray-600 text-xl"></i>
+                </div>
+                <div
+                  class="flex-grow bg-gray-50 rounded-lg p-3 conversation-bubble"
+                >
+                  <p class="text-gray-700">
+                    « Combien de patients ont été activés cette semaine ? »
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-robot text-primary-600 text-xl"></i>
+                </div>
+                <div
+                  class="flex-grow bg-primary-50 rounded-lg p-3 conversation-bubble ml-6"
+                >
+                  <p class="text-gray-700">
+                    « 37 nouveaux patients inscrits. Vérification couverture
+                    automatisée dans 96 % des cas. »
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-user-circle text-gray-600 text-xl"></i>
+                </div>
+                <div
+                  class="flex-grow bg-gray-50 rounded-lg p-3 conversation-bubble"
+                >
+                  <p class="text-gray-700">« Et les aides financières ? »</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-robot text-primary-600 text-xl"></i>
+                </div>
+                <div
+                  class="flex-grow bg-primary-50 rounded-lg p-3 conversation-bubble ml-6"
+                >
+                  <p class="text-gray-700">
+                    « L'activation des programmes d'assistance a pris en moyenne
+                    2,4 jours. 81 % des patients adhèrent au suivi personnalisé.
+                    »
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- UC#4 -->
+          <div
+            class="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow animate-fade-in"
+            style="animation-delay: 300ms"
+          >
+            <div class="pb-4 mb-4">
+              <h2
+                class="text-xl font-bold text-gray-900 flex items-center gap-2"
+              >
+                <i class="fas fa-people-arrows text-primary-600"></i>
+                UC#4 Collaborative Engagement
+              </h2>
+              <p class="text-gray-600 mt-2">
+                <strong>Persona :</strong> Resp. relation fournisseurs
+              </p>
+            </div>
+
+            <div class="space-y-4">
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-user-circle text-gray-600 text-xl"></i>
+                </div>
+                <div
+                  class="flex-grow bg-gray-50 rounded-lg p-3 conversation-bubble"
+                >
+                  <p class="text-gray-700">
+                    « Une plainte a été déposée hier. Où en est-on ? »
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-robot text-primary-600 text-xl"></i>
+                </div>
+                <div
+                  class="flex-grow bg-primary-50 rounded-lg p-3 conversation-bubble ml-6"
+                >
+                  <p class="text-gray-700">
+                    « Traitée à 68 % par les équipes pharma et logistique. Délai
+                    estimé de résolution : 14 heures. »
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-user-circle text-gray-600 text-xl"></i>
+                </div>
+                <div
+                  class="flex-grow bg-gray-50 rounded-lg p-3 conversation-bubble"
+                >
+                  <p class="text-gray-700">« Des réclamations similaires ? »</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div
+                  class="flex-shrink-0 w-10 h-10 flex items-center justify-center"
+                >
+                  <i class="fas fa-robot text-primary-600 text-xl"></i>
+                </div>
+                <div
+                  class="flex-grow bg-primary-50 rounded-lg p-3 conversation-bubble ml-6"
+                >
+                  <p class="text-gray-700">
+                    « 3 cas similaires dans les 30 derniers jours. J'ai généré
+                    un rapport comparatif. »
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="text-center mt-8 animate-fade-in">
+          <a
+            href="https://agentforce-eke1.onrender.com/#toc"
+            class="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-full font-semibold hover:bg-primary-700 transition-colors"
+          >
+            <span>Tous les détails</span>
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
